@@ -2,26 +2,26 @@ const prompt = require('prompt-sync')();
 
 // Esta é uma array que tem como função receber os objetos que foram criados
 let remedios = [
-    { "id": 1, "nome": "paracetamol", "preco": Number(10.00), "categoria": "antitérmico", "controlado": false },
+    { "id": 1, "nome": "paracetamol", "preco": Number(10.00), "categoria": "analgesico", "controlado": false },
     { "id": 2, "nome": "Dipirona Monoidratada", "preco": Number(15.00), "categoria": "analgesico", "controlado": false },
     { "id": 3, "nome": "Neosaldina", "preco": Number(15.00), "categoria": "analgesico", "controlado": false },
     { "id": 4, "nome": "Dorflex", "preco": Number(10.00), "categoria": "analgesico", "controlado": false },
     { "id": 5, "nome": "Novalgina", "preco": Number(15.00), "categoria": "analgesico", "controlado": false },
-    { "id": 6, "nome": "Nimesulida", "preco": Number(20.00), "categoria": "anti-inflamatorio", "controlado": true },
+    { "id": 6, "nome": "Nimesulida", "preco": Number(20.00), "categoria": "anti-inflamatorio", "controlado": false },
     { "id": 7, "nome": "Diclofenaco", "preco": Number(15.00), "categoria": "anti-inflamatorio", "controlado": false },
     { "id": 8, "nome": "Ibuprofeno", "preco": Number(25.00), "categoria": "anti-inflamatorio", "controlado": false },
-    { "id": 9, "nome": "Toragesic", "preco": Number(30.00), "categoria": "anti-inflamatorio", "controlado": true },
+    { "id": 9, "nome": "Toragesic", "preco": Number(30.00), "categoria": "anti-inflamatorio", "controlado": false },
     { "id": 10, "nome": "AAs", "preco": Number(20.00), "categoria": "anti-inflamatorio", "controlado": false },
     { "id": 12, "nome": "Amoxicilina", "preco": Number(40.00), "categoria": "antibiotico", "controlado": true },
     { "id": 13, "nome": "Clavulin BD", "preco": Number(50.00), "categoria": "antibiotico", "controlado": true },
-    { "id": 14, "nome": "Azitromicina Di-Hidratada", "preco": Number(40.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 15, "nome": "Ciprofloxacina", "preco": Number(40.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 16, "nome": "Sulfametoxazol", "preco": Number(25.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 17, "nome": "Allegra", "preco": Number(25.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 18, "nome": "Polaramine", "preco": Number(25.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 19, "nome": "Histamin", "preco": Number(25.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 20, "nome": "Alektos", "preco": Number(30.00), "categoria": "antibiotico", "controlado": false },
-    { "id": 21, "nome": "Loratadina", "preco": Number(20.00), "categoria": "antibiotico", "controlado": false },
+    { "id": 14, "nome": "Azitromicina Di-Hidratada", "preco": Number(40.00), "categoria": "antibiotico", "controlado": true },
+    { "id": 15, "nome": "Ciprofloxacina", "preco": Number(40.00), "categoria": "antibiotico", "controlado": true },
+    { "id": 16, "nome": "Sulfametoxazol", "preco": Number(25.00), "categoria": "antibiotico", "controlado": true },
+    { "id": 17, "nome": "Allegra", "preco": Number(25.00), "categoria": "antialergico", "controlado": false },
+    { "id": 18, "nome": "Polaramine", "preco": Number(25.00), "categoria": "antialergico", "controlado": false },
+    { "id": 19, "nome": "Histamin", "preco": Number(25.00), "categoria": "antialergico", "controlado": false },
+    { "id": 20, "nome": "Alektos", "preco": Number(30.00), "categoria": "antialergico", "controlado": false },
+    { "id": 21, "nome": "Loratadina", "preco": Number(20.00), "categoria": "antialergico", "controlado": false },
 ];
 
 // Aqui temos um prompt para receber o nome do cliente, e um for para mostrar a lista das categorias disponíveis
