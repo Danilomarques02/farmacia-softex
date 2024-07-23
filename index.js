@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")();
 
 // Esta é uma array que tem como função receber os objetos que foram criados
 let remedios = [
-  { id: 1, nome: "paracetamol", preco: Number(10.0), categoria: "analgesico", controlado: false, },
+  { id: 1, nome: "Paracetamol", preco: Number(10.0), categoria: "analgesico", controlado: false, },
   { id: 2, nome: "Dipirona Monoidratada", preco: Number(15.0), categoria: "analgesico", controlado: false, },
   { id: 3, nome: "Neosaldina", preco: Number(15.0), categoria: "analgesico", controlado: false, },
   { id: 4, nome: "Dorflex", preco: Number(10.0), categoria: "analgesico", controlado: false, },
@@ -12,16 +12,16 @@ let remedios = [
   { id: 8, nome: "Ibuprofeno", preco: Number(25.0), categoria: "anti-inflamatorio", controlado: false, },
   { id: 9, nome: "Toragesic", preco: Number(30.0), categoria: "anti-inflamatorio", controlado: false, },
   { id: 10, nome: "AAs", preco: Number(20.0), categoria: "anti-inflamatorio", controlado: false, },
-  { id: 12, nome: "Amoxicilina", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
-  { id: 13, nome: "Clavulin BD", preco: Number(50.0), categoria: "antibiotico", controlado: true, },
-  { id: 14, nome: "Azitromicina Di-Hidratada", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
-  { id: 15, nome: "Ciprofloxacina", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
-  { id: 16, nome: "Sulfametoxazol", preco: Number(25.0), categoria: "antibiotico", controlado: true, },
-  { id: 17, nome: "Allegra", preco: Number(25.0), categoria: "antialergico", controlado: false, },
-  { id: 18, nome: "Polaramine", preco: Number(25.0), categoria: "antialergico", controlado: false, },
-  { id: 19, nome: "Histamin", preco: Number(25.0), categoria: "antialergico", controlado: false, },
-  { id: 20, nome: "Alektos", preco: Number(30.0), categoria: "antialergico", controlado: false, },
-  { id: 21, nome: "Loratadina", preco: Number(20.0), categoria: "antialergico", controlado: false, },
+  { id: 11, nome: "Amoxicilina", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
+  { id: 12, nome: "Clavulin BD", preco: Number(50.0), categoria: "antibiotico", controlado: true, },
+  { id: 13, nome: "Azitromicina Di-Hidratada", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
+  { id: 14, nome: "Ciprofloxacina", preco: Number(40.0), categoria: "antibiotico", controlado: true, },
+  { id: 15, nome: "Sulfametoxazol", preco: Number(25.0), categoria: "antibiotico", controlado: true, },
+  { id: 16, nome: "Allegra", preco: Number(25.0), categoria: "antialergico", controlado: false, },
+  { id: 17, nome: "Polaramine", preco: Number(25.0), categoria: "antialergico", controlado: false, },
+  { id: 18, nome: "Histamin", preco: Number(25.0), categoria: "antialergico", controlado: false, },
+  { id: 19, nome: "Alektos", preco: Number(30.0), categoria: "antialergico", controlado: false, },
+  { id: 20, nome: "Loratadina", preco: Number(20.0), categoria: "antialergico", controlado: false, },
 ];
 
 let funcionarios = [
@@ -29,17 +29,19 @@ let funcionarios = [
 ];
 
 function createFuncionario() {
-	console.log("Bem vindo ao sistema de cadastro de funcionario !");
+	console.log("Bem vindo ao sistema de cadastro de funcionario!");
 	let id = prompt("Digite o cpf do funcionário(sem pontuação, apenas números): ");
 	let nome = prompt("Digite o nome do funcionário: ");
 	let email = prompt("Digite o email do funcionário: ");
 	let pin = prompt("Peça para o funcionário inserir uma senha: ");
 	let isAdmin = prompt("Esse funcionário será administrador?(S/n) ");
+
 	if (isAdmin.toLowerCase() == "s") {
 		roleAdmin = true
 	} else {
 		roleAdmin = false;
 	}
+
 	funcionarios.push({id: id, nome: nome, email: email, pin: pin, administrator: roleAdmin})
 }
 
@@ -53,14 +55,16 @@ function loginFuncionario() {
       console.log("E-mail ou senha incorretos");
     }
 	}
+
 }
 
-createFuncionario();
-loginFuncionario();
+// createFuncionario();
+// loginFuncionario();
 
 function updateMedicine() {
 	// nome do remédio que será buscado
-  let buscadorRemedio = prompt(`Qual remédio você deseja alterar o nome?`);
+  let buscadorRemedio = prompt(`Qual remédio você deseja alterar?`);
+
   for (let i = 0; i < remedios.length; i++) {
 		// checagem pra ver se o remédio existe
     if (buscadorRemedio.toUpperCase() == remedios[i].nome.toUpperCase()) {
