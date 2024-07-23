@@ -24,6 +24,40 @@ let remedios = [
   { id: 21, nome: "Loratadina", preco: Number(20.0), categoria: "antialergico", controlado: false, },
 ];
 
+let funcionarios = [
+  { id: "37541053023", nome: "Juarez José", pin: "21436587", email: "juuarezjose92@gmail.com", administrator: true},
+];
+
+function createFuncionario() {
+	console.log("Bem vindo ao sistema de cadastro de funcionario !");
+	let id = prompt("Digite o cpf do funcionário(sem pontuação, apenas números): ");
+	let nome = prompt("Digite o nome do funcionário: ");
+	let email = prompt("Digite o email do funcionário: ");
+	let pin = prompt("Peça para o funcionário inserir uma senha: ");
+	let isAdmin = prompt("Esse funcionário será administrador?(S/n) ");
+	if (isAdmin.toLowerCase() == "s") {
+		roleAdmin = true
+	} else {
+		roleAdmin = false;
+	}
+	funcionarios.push({id: id, nome: nome, email: email, pin: pin, administrator: roleAdmin})
+}
+
+function loginFuncionario() {
+	let loginEmail = prompt("Digite o seu e-mail: ");
+  let loginPin = prompt("Digite a sua senha: ");
+	for (let i = 0; i < funcionarios.length; i++) {
+    if (loginEmail == funcionarios[i].email && loginPin == funcionarios[i].pin) {
+      console.log(`Bem vindo ${funcionarios[i].nome}!`);
+    } else {
+      console.log("E-mail ou senha incorretos");
+    }
+	}
+}
+
+createFuncionario();
+loginFuncionario();
+
 function updateMedicine() {
 	// nome do remédio que será buscado
   let buscadorRemedio = prompt(`Qual remédio você deseja alterar o nome?`);
