@@ -24,10 +24,12 @@ let remedios = [
   { id: 20, nome: "Loratadina", preco: Number(20.0), categoria: "antialergico", controlado: false, },
 ];
 
+//Array de funcionarios
 let funcionarios = [
   { id: "37541053023", nome: "Juarez José", pin: "21436587", email: "juuarezjose92@gmail.com", administrator: true},
 ];
 
+//função criar funcionarios
 function createFuncionario() {
 	console.log("Bem vindo ao sistema de cadastro de funcionario!");
 	let id = prompt("Digite o cpf do funcionário(sem pontuação, apenas números): ");
@@ -44,7 +46,7 @@ function createFuncionario() {
 
 	funcionarios.push({id: id, nome: nome, email: email, pin: pin, administrator: roleAdmin})
 }
-
+//função de login do funcionario
 function loginFuncionario() {
 	let loginEmail = prompt("Digite o seu e-mail: ");
   let loginPin = prompt("Digite a sua senha: ");
@@ -127,7 +129,7 @@ function updateMedicine() {
   }
 }
 
-// Aqui temos um prompt para receber o nome do cliente, e um for para mostrar a lista das categorias disponíveis
+// Aqui temos um prompt para receber o nome do cliente
 let nomeCliente = prompt(`Olá, qual seu nome? `);
 console.log(`Olá ${nomeCliente}, estas são as categorias disponíveis:`);
 
