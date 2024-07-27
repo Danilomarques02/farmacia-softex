@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nome": "Paracetamol",
+    "nome": "",
     "preco": 10,
     "categoria": "analgesico",
     "controlado": false,
@@ -17,11 +17,11 @@
   },
   {
     "id": 3,
-    "nome": "Neosaldina",
+    "nome": "neosaldina",
     "preco": 15,
     "categoria": "analgesico",
     "controlado": false,
-    "quantidade": 20
+    "quantidade": 19
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "preco": 15,
     "categoria": "anti-inflamatorio",
     "controlado": false,
-    "quantidade": 20
+    "quantidade": 19
   },
   {
     "id": 8,
@@ -74,10 +74,10 @@
   {
     "id": 10,
     "nome": "AAs",
-    "preco": 20,
+    "preco": 30,
     "categoria": "anti-inflamatorio",
     "controlado": false,
-    "quantidade": 20
+    "quantidade": 19
   },
   {
     "id": 11,
@@ -130,7 +130,7 @@
   {
     "id": 17,
     "nome": "Polaramine",
-    "preco": 25,
+    "preco": 20,
     "categoria": "antialergico",
     "controlado": false,
     "quantidade": 20
@@ -160,4 +160,3 @@
     "quantidade": 20
   }
 ]
-
