@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 const funcionarios = require("./funcionarios.json");
-const fs = require("fs"); // módulo file sytem
+const fs = require("fs"); 
 
 // Função para carregar o arquivo JSON
 function listaRemedios() {
